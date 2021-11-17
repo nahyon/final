@@ -1,0 +1,13 @@
+components:
+  schemas:
+    SampleRes:
+      type: object
+      required:
+        - anyString
+        - anyNumber
+      properties:
+        symbol:
+          type: string
+        volume:
+          type: integer
+          format: integer

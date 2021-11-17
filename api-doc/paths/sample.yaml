@@ -1,0 +1,29 @@
+paths:
+  /stocks/{symbol}:
+    get:
+      summary: daily
+      tags:
+        - Stocks
+      parameters:
+        - in: path  
+          name: symbol
+          required: true
+          description: The name of the company to return.
+          schema:
+            type : string
+      responses:
+        201:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SampleRes"
+              example:
+                symbol: "IBM"
+                volume: 3342627
+        400:
+          description: error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"

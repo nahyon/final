@@ -1,0 +1,10 @@
+components:
+  schemas:
+    SampleReq:
+      type: object
+      required:
+        - symbol
+      properties:
+        symbol:
+          type: string
+     
